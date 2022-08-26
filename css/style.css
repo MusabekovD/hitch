@@ -29,15 +29,10 @@ html::-webkit-scrollbar-thumb{
 }
 
 .container{
-    max-width: 375px;
+    min-width: 375px;
     padding: 0 15px;
 }
-.header{
-    background-image: url('../imgs/main/375.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 600px;
-}
+
 header .header-navbar{
     width: 100%;
     background: #000;
@@ -80,9 +75,14 @@ header .header-navbar{
     color: #fff;
 
 }
+.header-content{
+    width: 100%;
+    height: 650px;
+    background-image: url(../imgs/main/MAIN.png);
+    background-repeat: no-repeat;
+}
 .header-content .content {
     padding-top: 50px;
-
 }
 .header-content .content h1{
     width: 93%;
@@ -120,24 +120,24 @@ margin-bottom: 20px;
     border: 2px solid #fff;
 
 }
-.opened{
-    /* position: absolute; */
+ .header .opened{
+    position: absolute;
     width: 100%;
+    right: -400px;
     min-height: 100vh;
-    top: 0;
-    left: -400px ;
     background: #000;   
-    /* display: none; */
+    transition: .5s linear;
+    clip-path: polygon(100% 0, 94% 0, 94% 100%, 100% 100%);
 }
 .opened.active{
-left: 0;
-
+right: 0;
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .opened-content{
     display: flex;
     flex-direction: column;
 }
-.opened-conten .search{
+ .search{
     display: flex;
     flex-direction: column;
 }
@@ -148,14 +148,14 @@ left: 0;
     background-color: #99FE00;
     margin-top: 15px;
 }
-.opened-content .for-search{
+ .for-search{
 display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
 padding-top: 32px;
 }
-.opened-content .for-search h3{
+ .for-search h3{
 font-style: normal;
 font-weight: 900;
 font-size: 16px;
@@ -165,7 +165,7 @@ text-transform: uppercase;
 color: #99FE00;
 opacity: 0.5;
 }
-.opened-content .for-search ion-icon{
+ .for-search ion-icon{
     color: #99FE00;
     font-size: 25px;
     cursor: pointer;    
@@ -178,7 +178,6 @@ line-height: 32px;
 text-transform: uppercase;
 margin-top: 45px;
 color: #99FE00;
-margin-bottom: 20px;
 }
 .opened-content .list{
     gap: 40px;
@@ -196,8 +195,6 @@ margin-bottom: 20px;
     letter-spacing: 0.6px;
     text-transform: uppercase;
     color: #999999;
-    margin-bottom: 15px;
-    
 }
 .opened-content .list .second{
     margin-bottom: 40px;
@@ -219,4 +216,13 @@ line-height: 35px;
 letter-spacing: 0.6px;
 text-transform: uppercase;
 color: #FFFFFF;
+transition: .4s linear;
+}
+.opened-content  ul li:hover a{
+    color: #99FE00;
+}
+
+.logo .logo-text{
+    display: none;
+
 }
