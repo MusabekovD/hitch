@@ -9,6 +9,7 @@
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-family: 'Mulish', sans-serif;
+
 }
 html{
     font-size: 62.5%;
@@ -35,14 +36,10 @@ html::-webkit-scrollbar-thumb{
     background-image: url('../imgs/main/375.png');
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-position: bottom right ; */
-    /* background-position: 100% -70px ; */
-    min-height: 100vh;
-
+    min-height: 600px;
 }
 header .header-navbar{
     width: 100%;
-    height: 100%;
     background: #000;
 }
 .header-navbar .navbar{
@@ -50,6 +47,8 @@ header .header-navbar{
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+    height: 80px;
+
 }
 .header-navbar .navbar .logo{
     margin-left: 15px;
@@ -59,16 +58,34 @@ header .header-navbar{
     align-items: center;
     flex-direction: row;
     cursor: pointer;
+    height: 100%;
 }
-.header-content{
-  /* margin-top: 50px; */
+.navbar .icons .icons-box{
+    width: 60px;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    border-left: 1px solid rgba(153, 254, 0, 0.3);
+    border-right: 1px solid rgba(153, 254, 0, 0.3);
+}
+.navbar .icons .icons-box ion-icon{
+    font-size: 24px ;
+    color: #99FE00;
+    transition: .4s linear;
+}
+.navbar .icons .icons-box ion-icon:hover{
+    color: #fff;
+
 }
 .header-content .content {
     padding-top: 50px;
 
 }
 .header-content .content h1{
-    width: 345px;
+    width: 93%;
 height: 132px;
     font-style: normal;
 font-weight: 900;
@@ -76,7 +93,7 @@ font-size: 28px;
 line-height: 44px;
 text-transform: uppercase;
 color: #FFFFFF;
-margin-bottom: 60px;
+margin-bottom: 100px;
 }
 .header-content .content h1 span{
     color: #99FE00;
@@ -96,4 +113,110 @@ margin-bottom: 20px;
     padding: 12px 55px;
     border: 2px solid #99FE00;
     display: inline-block;
+    transition: .5s;
+}
+.btnGreen a:hover{
+    color: #FFFFFF;
+    border: 2px solid #fff;
+
+}
+.opened{
+    /* position: absolute; */
+    width: 100%;
+    min-height: 100vh;
+    top: 0;
+    left: -400px ;
+    background: #000;   
+    /* display: none; */
+}
+.opened.active{
+left: 0;
+
+}
+.opened-content{
+    display: flex;
+    flex-direction: column;
+}
+.opened-conten .search{
+    display: flex;
+    flex-direction: column;
+}
+ .search .line{
+    
+    width: 100%;
+    height: 2px ;
+    background-color: #99FE00;
+    margin-top: 15px;
+}
+.opened-content .for-search{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+padding-top: 32px;
+}
+.opened-content .for-search h3{
+font-style: normal;
+font-weight: 900;
+font-size: 16px;
+line-height: 20px;
+text-align: center;
+text-transform: uppercase;
+color: #99FE00;
+opacity: 0.5;
+}
+.opened-content .for-search ion-icon{
+    color: #99FE00;
+    font-size: 25px;
+    cursor: pointer;    
+}
+.opened-content h1{
+font-style: normal;
+font-weight: 900;
+font-size: 25px;
+line-height: 32px;
+text-transform: uppercase;
+margin-top: 45px;
+color: #99FE00;
+margin-bottom: 20px;
+}
+.opened-content .list{
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.opened-content .list .first{
+    margin-bottom: 40px;
+}
+.opened-content .list h2{
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #999999;
+    margin-bottom: 15px;
+    
+}
+.opened-content .list .second{
+    margin-bottom: 40px;
+}
+.opened-content  ul {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.opened-content  ul li {
+display: block;
+width: 70%;
+}
+.opened-content  ul li a{
+font-style: normal;
+font-weight: 900;
+font-size: 16px;
+line-height: 35px;
+letter-spacing: 0.6px;
+text-transform: uppercase;
+color: #FFFFFF;
 }
